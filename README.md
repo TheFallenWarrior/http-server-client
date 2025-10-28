@@ -48,7 +48,7 @@ Servidor: bin/http-server [opções] <dir>
   <dir> é o diretório local a ser compartilhado via HTTP
   Opções:
     -d          Desativa a listagem de diretórios (o servidor responde com '403 Forbidden')
-    -p          Configura a porta do servidor (padrão: 8080)
+    -p          Configura o número da porta do servidor (padrão: 8080)
 ```
 
 ## Créditos
