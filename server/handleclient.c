@@ -29,6 +29,7 @@ ThreadArgs *createThreadArgs(uint8_t listDir, char *baseDir){
 	targ->baseDir = malloc(1+strlen(baseDir));
 	if(!targ->baseDir){
 		perror("malloc failed");
+		free(targ);
 		return NULL;
 	}
 	strcpy(targ->baseDir, baseDir);
@@ -116,6 +117,9 @@ void *handleClient(void *arg){
 	ParsedRequest *preq = createParsedRequest();
 	if(!preq){
 		httpErrorCode(targ->sockfd, 500);
+		freeThreadArgs(targ);
+		freeParsedRequest(preq);
+		pthread_exit(NULL);
 	}
 	int x = parseRequest(request, preq);
 	if(x > 0){
