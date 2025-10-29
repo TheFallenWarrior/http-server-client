@@ -4,6 +4,26 @@ Este repositório contém os arquivos fonte do trabalho prático de Redes de Com
 
 O objetivo do trabalho é implementar um cliente e um servidor HTTP.
 
+## Funcionalidades
+
+### Cliente
+
+* Fazer requisições `GET` e salvar a resposta localmente;
+* Detecção minuciosa de erros com log para `stderr`;
+* Permitir o usuário escolher onde salvar a resposta (via a opção `-o`);
+* Suporte a redirecionamento (códigos HTTP 3xx);
+* Suporte a `Transfer-Encoding: chunked`.
+
+### Servidor
+
+* Servir arquivos de uma pasta local via HTTP/1.1;
+* Detecção minuciosa de erros com log para `stderr`;
+* Multi-threading para servir múltiplos clientes simultaneamente;
+* Detecção do tipo de mídia (*MIME Type*) para enviar no `Content-Type`;
+* Proteção simples contra ataques do tipo *path traversal*; 
+* Listagem de diretórios para pastas sem `index.html`;
+* Se o cliente pedir uma pasta sem `/` no final, redirecionar para o endereço correto.
+
 ## Estrutura dos diretórios
 
 ```
@@ -54,26 +74,6 @@ bin/http-server [opções] <dir>
     -d          Desativa a listagem de diretórios (o servidor responde com '403 Forbidden')
     -p          Configura o número da porta do servidor (padrão: 8080)
 ```
-
-## Funcionalidades
-
-### Cliente
-
-* Fazer requisições `GET` e salvar a resposta localmente;
-* Detecção minuciosa de erros com log para `stderr`;
-* Permitir o usuário escolher onde salvar a resposta (via a opção `-o`);
-* Suporte a redirecionamento (códigos HTTP 3xx);
-* Suporte a `Transfer-Encoding: chunked`.
-
-### Servidor
-
-* Servir arquivos de uma pasta local via HTTP/1.1;
-* Detecção minuciosa de erros com log para `stderr`;
-* Multi-threading para servir múltiplos clientes simultaneamente;
-* Detecção do tipo de mídia (*MIME Type*) para enviar no `Content-Type`;
-* Proteção simples contra ataques do tipo *path traversal*; 
-* Listagem de diretórios para pastas sem `index.html`;
-* Se o cliente pedir uma pasta sem `/` no final, redirecionar para o endereço correto.
 
 ## Créditos
 
