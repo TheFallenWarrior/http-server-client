@@ -136,7 +136,6 @@ void *handleClient(void *arg){
 			httpErrorCode(targ->sockfd, 500);
 		}
 		freeThreadArgs(targ);
-		freeParsedRequest(preq);
 		pthread_exit(NULL);
 	}
 
