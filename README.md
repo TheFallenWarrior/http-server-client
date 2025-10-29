@@ -73,7 +73,7 @@ bin/http-server [opções] <dir>
 * Detecção do tipo de mídia (*MIME Type*) para enviar no `Content-Type`;
 * Proteção simples contra ataques do tipo *path traversal*; 
 * Listagem de diretórios para pastas sem `index.html`;
-* Se o cliente pedir uma pasta sem `/` no final, o servidor redireciona para o endereço correto.
+* Se o cliente pedir uma pasta sem `/` no final, redirecionar para o endereço correto.
 
 ## Créditos
 
