@@ -19,7 +19,7 @@ const MimeTypeMap mimeTypes[] = {
 	{".woff2","font/woff2"},
 
 	// Texto
-	{".pdf",  "aplication/pdf"},
+	{".pdf",  "application/pdf"},
 	{".txt",  "text/plain"},
 	{".cfg",  "text/plain"},
 	{".conf", "text/plain"},
