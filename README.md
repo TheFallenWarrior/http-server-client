@@ -30,7 +30,7 @@ O objetivo do trabalho é implementar um cliente e um servidor HTTP.
 http-server-client/
 > bin/ *
     > http-client   Executável do cliente
-    > http-server   Executável do cliente
+    > http-server   Executável do servidor
   client/
     > *.c; *.h      Arquivos fonte do cliente
 > obj/ *
