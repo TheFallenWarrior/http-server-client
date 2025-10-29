@@ -27,24 +27,28 @@ http-server-client/
 
 ### Compilar
 
-`make bin/http-client` Compila o cliente
+**Cliente:**
+`make bin/http-client`
 
-`make bin/http-server` Compila o servidor
+**Servidor:**
+`make bin/http-server`
 
-`make` Compila ambos cliente e servidor
+`make` compila ambos cliente e servidor.
 
 ### Executar
 
+**Cliente:**
 ```
-Cliente: bin/http-client [opções] <url>
+bin/http-client [opções] <url>
   <url> é uma URL no formato [http://]host[:porta][/caminho/para/o/arquivo]
   Opções:
     -r <redirs> Configura o número máximo de redirecionamentos (padrão: 10)
     -o <file>   Configura o arquivo de saída; se <file> for 'stdout', usar a saída padrão
 ```
 
+**Servidor:**
 ```
-Servidor: bin/http-server [opções] <dir>
+bin/http-server [opções] <dir>
   <dir> é o diretório local a ser compartilhado via HTTP
   Opções:
     -d          Desativa a listagem de diretórios (o servidor responde com '403 Forbidden')
